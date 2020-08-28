@@ -1,0 +1,1555 @@
+@font-face {
+  font-family: 'DS-Digital';
+  /*src: url('../fonts/segment7/Segment7Standard.otf') format('otf');*/
+  src: url('../fonts/Segment7Standard.woff') format('woff'), url('../fonts/Segment7Standard.eot'), url('../fonts/Segment7Standard.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pump_area {
+  margin: 5px auto 0 auto;
+  position: relative;
+  color: white !important;
+}
+
+.pump_area .pump_img {
+  width: 100%;
+
+}
+
+.energy-meter-status {
+  font-family: Roboto, sans-serif !important;
+}
+
+.jar_area {
+  text-align: center;
+  width: 80px;
+  position: absolute;
+}
+
+.jar {
+  position: relative;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+}
+
+.jar_level_area {
+  position: absolute;
+  color: #fff;
+}
+
+.jar_level_area.top {
+  top: -8px;
+  right: 85px;
+}
+
+.jar_level_area.bottom {
+  bottom: -6px;
+  right: 85px;
+}
+
+.jar_level_area div {
+  position: relative;
+  top: -3px;
+  width: 40px;
+  height: 2px;
+  display: inline-block;
+}
+
+.jar .water {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background-color: rgba(0, 204, 255, 0.7);
+  bottom: -1px;
+  /*overflow: hidden;*/
+  -webkit-transition: all 2s;
+  /* Safari */
+  transition: all 2s;
+}
+
+.water .level_area {
+  position: relative;
+  right: -79px;
+  top: -11px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.water .level_area div {
+  position: relative;
+  width: 35px;
+  background: rgba(255, 255, 255, 0.62);
+  height: 2px;
+  display: inline-block;
+  top: -2px;
+  margin-right: 4px;
+}
+
+#totalflow {
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  font-family: 'DS-Digital';
+}
+
+.bubble_wrapper {
+  position: relative;
+  position: relative;
+  width: 100%;
+  top: -18px;
+  height: 100%;
+  overflow: hidden;
+}
+
+#pressure_meter {
+  position: absolute;
+  /*width: 88px;
+    height: 80px;*/
+}
+
+#canvas-preview {
+  width: 100%;
+  height: 100%;
+}
+
+.genarator_area {
+  width: 58px;
+  position: absolute;
+}
+
+.genarator_area img {
+  transform: rotate(0deg);
+  width: 100%;
+}
+
+.rotateFan {
+  -webkit-animation: rotation .6s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.flow_meter {
+  position: absolute;
+  text-align: center;
+  /*width: 83px;*/
+  /*background: #ccc;*/
+  /*padding: 5px;*/
+  /*border: 2px solid #666;*/
+}
+
+#todaysflow {
+  width: 88px;
+  height: 80px;
+}
+
+.odometer {
+  font-size: 16px;
+  margin: 1px 0;
+}
+
+.odometer.odometer-auto-theme .odometer-digit:last-child {
+  /*color: #eee0d3 !important;*/
+  /*background-image: -webkit-linear-gradient(top, #333333 0%, #333333 40%, #101010 60%, #333333 80%, #333333 100%) !important;
+  background-image: -moz-linear-gradient(top, #333333 0%, #333333 40%, #101010 60%, #333333 80%, #333333 100%) !important;
+  background-image: -o-linear-gradient(top, #333333 0%, #333333 40%, #101010 60%, #333333 80%, #333333 100%) !important;
+  background-image: -ms-linear-gradient(top, #333333 0%, #333333 40%, #101010 60%, #333333 80%, #333333 100%) !important;*/
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-car .odometer-digit {
+  background-image: none !important;
+  padding: 1px !important;
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-car {
+  background: none !important;
+}
+
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-car .odometer-digit {
+  box-shadow: none !important;
+}
+
+
+.clorine_flow {
+  position: absolute;
+}
+
+.clorine_silinder_area {
+  position: absolute;
+  width: 120px;
+}
+
+.clorine_silinder_area img {
+  width: 100%;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.signal_area {
+  position: absolute;
+}
+
+.signal {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 0 3px;
+}
+
+.signal.red {
+  background: #FF0000;
+}
+
+.signal.green {
+  background: #349946;
+}
+
+.signal.black {
+  background: #000 !important;
+}
+
+/*.blink {
+	-webkit-animation: signalblinkanimation 1s infinite alternate-reverse;
+}
+@-webkit-keyframes signalblinkanimation {
+	0% {
+		opacity: .2;
+	}
+	100% {
+		opacity: 1;
+	}
+}*/
+
+.blink_pressure_value {
+  -webkit-animation: textblinkblackred 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes textblinkblackred {
+  0% {
+    color: black;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.blink_flowmeter_value {
+  -webkit-animation: textblinkwhitered 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes textblinkwhitered {
+  0% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.blink_text {
+  -webkit-animation: textblink .5s infinite alternate-reverse;
+}
+
+@-webkit-keyframes textblink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.chlorine_jar_area {
+  text-align: center;
+  width: 22px;
+  position: absolute;
+}
+
+.chlorine_jar {
+  position: relative;
+  width: 100%;
+  height: 74px;
+  /*display: inline-block;*/
+  background-color: transparent;
+}
+
+.chlorine_jar i {
+  position: absolute;
+  color: red;
+}
+
+.chlorine_jar .chlorine {
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  background-color: #ffcc05;
+  bottom: 5px;
+  -webkit-transition: all 2s;
+  /* Safari */
+  transition: all 2s;
+}
+
+.chlorine .level_area {
+  position: relative;
+  right: -24px;
+  width: 100px;
+  display: inline-block;
+  top: -11px;
+  color: #2f1010;
+  font-size: 18px;
+}
+
+.chlorine .level_area div {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  display: inline-block;
+  top: -4px;
+}
+
+.energy_meter_reading {
+  position: absolute;
+}
+
+.energy_meter_reading p {
+  font-family: 'DS-Digital';
+  font-weight: 700;
+  font-size: 27px;
+  color: #333333;
+}
+
+.energy_meter_btn_area {
+  position: absolute;
+}
+
+.energy_meter_btn_area .wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 245px;
+}
+
+.energy_meter_btn_area button {
+  height: 75px;
+  background: #9793a5;
+  border: none;
+  border-radius: 14px;
+  padding: 0px 8px;
+}
+
+.energy_meter_btn_area button:focus {
+  outline: none;
+}
+
+.energy_meter_btn_area .data_table {
+  position: absolute;
+  top: 3px;
+  left: -176px;
+  z-index: -1;
+}
+
+.energy_meter_btn_area .data_table table, .energy_meter_btn_area .data_table td, .energy_meter_btn_area .data_table th {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  font-size: 12px;
+  background: #acb19a;
+}
+
+.energy_meter_btn_area .data_table td, .energy_meter_btn_area .data_table th {
+  padding: 5px;
+}
+
+.show_data_table {
+  -webkit-animation-name: data_table_animation_show;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: .3s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: data_table_animation_show;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+.hide_data_table {
+  -webkit-animation-name: data_table_animation_hide;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: .3s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: data_table_animation_hide;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+/* Standard syntax */
+
+@keyframes data_table_animation_show {
+  0% {
+    left: -176px;
+    visibility: visible;
+  }
+  50% {
+    left: 30px;
+    /*transform:scaleX(1.3);*/
+  }
+  100% {
+    /*transform:scaleX(1.0);*/
+    left: 18px;
+    visibility: visible;
+  }
+}
+
+/* Standard syntax */
+
+@keyframes data_table_animation_hide {
+  0% {
+    left: 18px;
+  }
+  50% {
+    left: 30px;
+  }
+  100% {
+    /*transform:scaleX(1.0);*/
+    left: -176px;
+    visibility: hidden;
+  }
+}
+
+/*Bubble animation section*/
+
+.field {
+  position: absolute;
+  bottom: -26px;
+  height: 161px;
+  width: 100% !important;
+  /*position: absolute !important;*/
+  /*bottom: 13px !important;*/
+  /*right: 302px !important;*/
+  overflow: hidden !important;
+}
+
+.network_area {
+  position: absolute;
+}
+
+.network_area .network_wrapper {
+  position: relative;
+}
+
+.network_area img {
+  width: 32px;
+  position: absolute;
+  left: 18px;
+  bottom: 14px;
+}
+
+.network_area ul {
+  display: inline-block;
+}
+
+.network_area li {
+  width: 5px;
+  background: #ccc;
+  display: inline-block;
+  list-style: none;
+  vertical-align: bottom;
+}
+
+.network_area ul li:nth-child(1) {
+  height: 5px;
+}
+
+.network_area ul li:nth-child(2) {
+  height: 10px;
+}
+
+.network_area ul li:nth-child(3) {
+  height: 15px;
+}
+
+.network_area ul li:nth-child(4) {
+  height: 20px;
+}
+
+.network_area ul li:nth-child(5) {
+  height: 25px;
+}
+
+.network_area ul li:nth-child(6) {
+  height: 30px;
+}
+
+.network_area ul li:nth-child(7) {
+  height: 35px;
+}
+
+.vfd_area {
+  position: absolute;
+}
+
+.vfd_img_area {
+  position: relative;
+  width: 130px;
+}
+
+.vfd_img_area img {
+  width: 100%;
+}
+
+.vfd_img_area .vfd_value {
+  position: absolute;
+  left: 13px;
+  bottom: -13px;
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+
+.vfd_img_area .vfd_value span {
+  font-family: 'DS-Digital';
+}
+
+.fan_CL {
+  position: absolute;
+}
+
+.fan_CL img {
+  width: 100%;
+}
+
+.fan_FlowMeter {
+  display: inline-block;
+  position: absolute;
+}
+
+.fan_FlowMeter img {
+  width: 100%;
+}
+
+#pressure_meter_value {
+  font-family: 'DS-Digital';
+  position: absolute;
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+  height: 16px;
+  overflow-y: hidden;
+  letter-spacing: 1px;
+}
+
+
+#flow_meter_value {
+  position: absolute;
+  width: 130px;
+  text-align: center;
+  font-family: 'DS-Digital';
+  color: #000;
+  font-weight: bold;
+}
+
+#network_error_layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+  top: 0;
+  left: 0;
+}
+
+#network_error_layer p {
+  text-align: center;
+  margin-top: 25%;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+.run-arrow-run {
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.run-arrow-run li {
+  width: 43px;
+  height: 24px;
+  opacity: 0.3;
+  float: left;
+  clear: left;
+  background: url(../img/right-arrow.png) no-repeat;
+  list-style: none;
+  transition: all;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 5s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+  -o-animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+}
+
+@keyframes blink1 {
+
+  1% {
+    opacity: .3;
+  }
+  3% {
+    opacity: 1;
+  }
+  10% {
+    opacity: .3;
+  }
+}
+
+@-webkit-keyframes blink1 {
+
+  1% {
+    opacity: .3;
+  }
+  3% {
+    opacity: 1;
+  }
+  10% {
+    opacity: .3;
+  }
+}
+
+@-moz-keyframes blink1 {
+
+  1% {
+    opacity: .3;
+  }
+  3% {
+    opacity: 1;
+  }
+  10% {
+    opacity: .3;
+  }
+}
+
+@-o-keyframes blink1 {
+
+  1% {
+    opacity: .3;
+  }
+  3% {
+    opacity: 1;
+  }
+  10% {
+    opacity: .3;
+  }
+}
+
+.arrow1 {
+  -webkit-animation-name: blink1;
+  -moz-animation-name: blink1;
+  -o-animation-name: blink1;
+  animation-name: blink1;
+}
+
+@keyframes blink2 {
+
+  3% {
+    opacity: .3;
+  }
+  5% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .3;
+  }
+}
+
+@-webkit-keyframes blink2 {
+
+  3% {
+    opacity: .3;
+  }
+  5% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .3;
+  }
+}
+
+@-moz-keyframes blink2 {
+
+  3% {
+    opacity: .3;
+  }
+  5% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .3;
+  }
+}
+
+@-o-keyframes blink2 {
+
+  3% {
+    opacity: .3;
+  }
+  5% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .3;
+  }
+}
+
+.arrow2 {
+  -webkit-animation-name: blink2;
+  -moz-animation-name: blink2;
+  -o-animation-name: blink2;
+  animation-name: blink2;
+}
+
+/*@keyframes blink3{
+
+	  5% {opacity:.3;}
+	  7% {opacity:1;}
+	  15% {opacity:.3;}
+}
+@-webkit-keyframes blink3{
+
+	  5% {opacity:.3;}
+	  7% {opacity:1;}
+	  15% {opacity:.3;}
+}
+@-moz-keyframes blink3{
+
+	  5% {opacity:.3;}
+	  7% {opacity:1;}
+	  15% {opacity:.3;}
+}
+@-o-keyframes blink3{
+
+	  5% {opacity:.3;}
+	  7% {opacity:1;}
+	  15% {opacity:.3;}
+}
+.arrow3 {
+	  -webkit-animation-name:blink3;
+	  -moz-animation-name:blink3;
+	  -o-animation-name:blink3;
+	  animation-name:blink3;
+}
+@keyframes blink4{
+	  7% {opacity:.3;}
+	  9% {opacity:1;}
+	  17% {opacity:.3;}
+}
+@-webkit-keyframes blink4{
+	  7% {opacity:.3;}
+	  9% {opacity:1;}
+	  17% {opacity:.3;}
+}
+@-moz-keyframes blink4{
+	  7% {opacity:.3;}
+	  9% {opacity:1;}
+	  17% {opacity:.3;}
+}
+@-o-keyframes blink4{
+	  7% {opacity:.3;}
+	  9% {opacity:1;}
+	  17% {opacity:.3;}
+}
+.arrow4 {
+	-webkit-animation-name:blink4;
+	  -moz-animation-name:blink4;
+	  -o-animation-name:blink4;
+	  animation-name:blink4;
+}
+@keyframes blink5{
+	  9% {opacity:.3;}
+	  11% {opacity:1;}
+	  19% {opacity:.3;}
+}
+@-webkit-keyframes blink5{
+	  9% {opacity:.3;}
+	  11% {opacity:1;}
+	  19% {opacity:.3;}
+}
+@-moz-keyframes blink5{
+	  9% {opacity:.3;}
+	  11% {opacity:1;}
+	  19% {opacity:.3;}
+}
+@-o-keyframes blink5{
+	  9% {opacity:.3;}
+	  11% {opacity:1;}
+	  19% {opacity:.3;}
+}
+.arrow5 {
+	  -webkit-animation-name:blink5;
+	  -moz-animation-name:blink5;
+	  -o-animation-name:blink5;
+	  animation-name:blink5;
+}
+@keyframes blink6{
+	  11% {opacity:.3;}
+	  13% {opacity:1;}
+	  21% {opacity:.3;}
+}
+@-webkit-keyframes blink6{
+	  11% {opacity:.3;}
+	  13% {opacity:1;}
+	  21% {opacity:.3;}
+}
+@-moz-keyframes blink6{
+	  11% {opacity:.3;}
+	  13% {opacity:1;}
+	  21% {opacity:.3;}
+}
+@-o-keyframes blink6{
+	  11% {opacity:.3;}
+	  13% {opacity:1;}
+	  21% {opacity:.3;}
+}
+.arrow6 {
+	  -webkit-animation-name:blink6;
+	  -moz-animation-name:blink6;
+	  -o-animation-name:blink6;
+	  animation-name:blink6;
+}*/
+
+.modal_zone {
+  display: inline-block;
+  position: absolute;
+}
+
+.modal_zone:hover {
+  background: rgba(0, 0, 0, 0.11);
+}
+
+.bg-img-num1 {
+  margin: 0 !important;
+}
+
+
+/*768, 900*/
+
+
+@media only screen and (max-width: 1100px) {
+  /* For desktop: */
+  .pump_area {
+    width: 630px;
+  }
+
+  .jar_area {
+    width: 70px;
+    bottom: 65px;
+    right: 61px;
+  }
+
+  .jar {
+    height: 147px;
+  }
+
+  .water .level_area {
+    right: -60px;
+  }
+
+  #pressure_meter {
+    width: 110px;
+    height: 100px;
+    top: 17px;
+    left: 208px;
+  }
+
+  .flow_meter {
+    top: 82px;
+    left: 318px;
+  }
+
+  #flow_meter_value {
+    right: 148px;
+    top: 158px;
+  }
+
+  #flow_meter_value .odometer-inside {
+    font-size: 16px;
+  }
+
+  #totalflow {
+    font-size: 16px;
+    top: 183px;
+    right: 164px;
+    width: 98px;
+  }
+
+  #todaysflow {
+    width: 200px;
+    height: 115px;
+  }
+
+  .chlorine_jar_area {
+    width: 50px;
+    top: 132px;
+    left: 44px;
+  }
+
+  .chlorine_jar {
+    height: 149px;
+  }
+
+  .network_area {
+    right: 11px;
+    top: 35px;
+  }
+
+  .vfd_area {
+    top: 13px;
+    right: 100px;
+  }
+
+  .fan_FlowMeter {
+    width: 25px;
+    right: 91px;
+    top: 122px;
+  }
+
+  #pressure_meter_value {
+    left: 248px;
+    top: 100px;
+    width: 30px;
+    text-align: center;
+  }
+
+  .pressure_meter_BG {
+    position: absolute;
+    top: 15px;
+    left: 202px;
+    width: 120px;
+  }
+
+  .fan_CL {
+    left: 95px;
+    top: 69px;
+    width: 30px;
+  }
+
+  .pressure_meter_modal {
+    width: 100px;
+    height: 100px;
+    top: 26px;
+    left: 214px;
+    border-radius: 35px;
+  }
+
+  .flow_meter_modal {
+    width: 136px;
+    height: 141px;
+    top: 105px;
+    right: 143px;
+    border-radius: 35px;
+  }
+
+  .VFD_modal {
+    width: 130px;
+    height: 60px;
+    top: 12px;
+    right: 100px;
+    border-radius: 20px;
+  }
+
+  .network_modal {
+    width: 80px;
+    height: 68px;
+    top: 8px;
+    right: 8px;
+    border-radius: 20px;
+  }
+
+  .chlorine_modal {
+    width: 48px;
+    height: 175px;
+    top: 112px;
+    left: 45px;
+    border-radius: 20px;
+  }
+
+  .water_modal {
+    width: 78px;
+    height: 188px;
+    bottom: 31px;
+    right: 60px;
+    border-radius: 20px;
+  }
+
+  .chlorine_jar i {
+    top: 30px;
+    left: 11px;
+    font-size: 30px;
+  }
+
+  .run-arrow-run {
+    top: 80px;
+    left: -2px;
+  }
+
+  .odometer-inside {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  /* For desktop: */
+  .pump_area {
+    width: 630px;
+  }
+
+  .jar_area {
+    width: 70px;
+    bottom: 65px;
+    right: 61px;
+  }
+
+  .jar {
+    height: 147px;
+  }
+
+  .water .level_area {
+    right: -60px;
+  }
+
+  #pressure_meter {
+    width: 110px;
+    height: 100px;
+    top: 21px;
+    left: 208px;
+  }
+
+  .flow_meter {
+    top: 82px;
+    left: 318px;
+  }
+
+  #flow_meter_value {
+    right: 148px;
+    top: 158px;
+  }
+
+  #flow_meter_value .odometer-inside {
+    font-size: 16px;
+  }
+
+  #totalflow {
+    font-size: 16px;
+    top: 183px;
+    right: 164px;
+    width: 98px;
+  }
+
+  #todaysflow {
+    width: 200px;
+    height: 115px;
+  }
+
+  .chlorine_jar_area {
+    width: 50px;
+    top: 132px;
+    left: 44px;
+  }
+
+  .chlorine_jar {
+    height: 149px;
+  }
+
+  .network_area {
+    right: 11px;
+    top: 32px;
+  }
+
+  .vfd_area {
+    top: 13px;
+    right: 100px;
+  }
+
+  .fan_FlowMeter {
+    width: 25px;
+    right: 91px;
+    top: 122px;
+  }
+
+  #pressure_meter_value {
+    left: 248px;
+    top: 100px;
+    width: 30px;
+    text-align: center;
+  }
+
+  .pressure_meter_BG {
+    position: absolute;
+    top: 15px;
+    left: 202px;
+    width: 120px;
+  }
+
+  .fan_CL {
+    left: 95px;
+    top: 69px;
+    width: 30px;
+  }
+
+  .pressure_meter_modal {
+    width: 100px;
+    height: 100px;
+    top: 26px;
+    left: 214px;
+    border-radius: 35px;
+  }
+
+  .flow_meter_modal {
+    width: 136px;
+    height: 141px;
+    top: 105px;
+    right: 143px;
+    border-radius: 35px;
+  }
+
+  .VFD_modal {
+    width: 130px;
+    height: 60px;
+    top: 12px;
+    right: 100px;
+    border-radius: 20px;
+  }
+
+  .network_modal {
+    width: 80px;
+    height: 68px;
+    top: 8px;
+    right: 8px;
+    border-radius: 20px;
+  }
+
+  .chlorine_modal {
+    width: 48px;
+    height: 175px;
+    top: 112px;
+    left: 45px;
+    border-radius: 20px;
+  }
+
+  .water_modal {
+    width: 78px;
+    height: 188px;
+    bottom: 31px;
+    right: 60px;
+    border-radius: 20px;
+  }
+
+  .chlorine_jar i {
+    top: 30px;
+    left: 11px;
+    font-size: 30px;
+  }
+
+  .run-arrow-run {
+    top: 80px;
+    left: -2px;
+  }
+
+  .odometer-inside {
+    font-size: 10px;
+  }
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .pump_area {
+    width: 866px;
+  }
+
+  .jar_area {
+    width: 85px;
+    bottom: 79px;
+    right: 76px;
+  }
+
+  .jar {
+    height: 182px;
+  }
+
+  .water .level_area {
+    right: -60px;
+  }
+
+  #pressure_meter {
+    width: 110px;
+    height: 100px;
+    top: 36px;
+    left: 267px;
+  }
+
+  .pressure_meter_BG {
+    position: absolute;
+    top: 31px;
+    left: 286px;
+    width: 150px;
+  }
+
+  .flow_meter {
+    top: 110px;
+    left: 402px;
+  }
+
+  #flow_meter_value .odometer-inside {
+    font-size: 18px;
+  }
+
+  #flow_meter_value {
+    top: 223px;
+    right: 231px;
+  }
+
+  #totalflow {
+    top: 252px;
+    right: 231px;
+    width: 118px;
+  }
+
+  #todaysflow {
+    width: 225px;
+    height: 130px;
+  }
+
+  .chlorine_jar_area {
+    width: 61px;
+    top: 157px;
+    left: 54px;
+  }
+
+  .chlorine_jar {
+    height: 186px;
+  }
+
+  .network_area {
+    right: 11px;
+    top: 35px;
+  }
+
+  .vfd_area {
+    top: 13px;
+    right: 100px;
+  }
+
+  .fan_FlowMeter {
+    width: 28px;
+    right: 42px;
+    top: 170px;
+  }
+
+  #pressure_meter_value {
+    left: 345px;
+    top: 135px;
+    font-size: 17px;
+    height: 19px;
+    width: 35px;
+    text-align: center;
+  }
+
+  .fan_CL {
+    left: 137px;
+    top: 100px;
+    width: 30px;
+  }
+
+  .pressure_meter_modal {
+    width: 116px;
+    height: 130px;
+    top: 26px;
+    left: 264px;
+    border-radius: 35px;
+  }
+
+  .flow_meter_modal {
+    width: 160px;
+    height: 169px;
+    top: 131px;
+    right: 181px;
+    border-radius: 35px;
+  }
+
+  .odometer-inside {
+    font-size: 12px;
+  }
+
+  .VFD_modal {
+    width: 175px;
+    height: 72px;
+    top: 14px;
+    right: 98px;
+    border-radius: 20px;
+  }
+
+  .vfd_img_area {
+    position: relative;
+    width: 175px;
+  }
+
+  .network_modal {
+    width: 80px;
+    height: 68px;
+    top: 8px;
+    right: 8px;
+    border-radius: 20px;
+  }
+
+  .chlorine_modal {
+    width: 60px;
+    height: 207px;
+    top: 142px;
+    left: 54px;
+    border-radius: 20px;
+  }
+
+  .water_modal {
+    width: 89px;
+    height: 241px;
+    bottom: 31px;
+    right: 74px;
+    border-radius: 20px;
+  }
+
+  .chlorine_jar i {
+    top: 30px;
+    left: 14px;
+    font-size: 40px;
+  }
+
+  .run-arrow-run {
+    top: 109px;
+    left: 6px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .pump_area {
+    width: 1000px;
+  }
+
+  .jar_area {
+    width: 109px;
+    bottom: 101px;
+    right: 98px;
+  }
+
+  .odometer-inside {
+    font-size: 16px;
+  }
+
+  .jar_level_area.top {
+    top: -8px;
+    right: 122px;
+  }
+
+  .jar_level_area.bottom {
+    bottom: -6px;
+    right: 122px;
+  }
+
+  .jar {
+    height: 234px;
+  }
+
+  .water .level_area {
+    right: -85px;
+  }
+
+  #pressure_meter {
+    width: 200px;
+    height: 100px;
+    top: 63px;
+    left: 316px;
+  }
+
+  #canvas-preview {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .pressure_meter_BG {
+    position: absolute;
+    top: 31px;
+    left: 325px;
+    width: 180px;
+  }
+
+  .flow_meter {
+    top: 134px;
+    left: 512px;
+  }
+
+  #flow_meter_value .odometer-inside {
+    font-size: 22px;
+  }
+
+  #flow_meter_value {
+    top: 250px;
+    right: 274px;
+  }
+
+  #totalflow {
+    font-size: 26px;
+    top: 290px;
+    right: 260px;
+    width: 157px;
+  }
+
+  #todaysflow {
+    width: 300px;
+    height: 180px;
+  }
+
+  .chlorine_jar_area {
+    width: 79px;
+    top: 207px;
+    left: 70px;
+  }
+
+  .chlorine_jar {
+    height: 237px;
+  }
+
+  .chlorine .level_area {
+    right: -47px;
+  }
+
+  .network_area {
+    right: 11px;
+    top: 32px;
+  }
+
+  .vfd_area {
+    top: 13px;
+    right: 100px;
+  }
+
+  .fan_FlowMeter {
+    width: 37px;
+    right: 134px;
+    top: 192px;
+  }
+
+  #pressure_meter_value {
+    left: 392px;
+    top: 159px;
+    font-size: 21px;
+    height: 23px;
+    width: 45px;
+    text-align: center;
+  }
+
+  .fan_CL {
+    left: 157px;
+    top: 114px;
+    width: 37px;
+  }
+
+  .pressure_meter_modal {
+    width: 142px;
+    height: 156px;
+    top: 38px;
+    left: 347px;
+    border-radius: 35px;
+  }
+
+  .flow_meter_modal {
+    width: 188px;
+    height: 205px;
+    top: 180px;
+    right: 243px;
+    border-radius: 35px;
+  }
+
+  .VFD_modal {
+    width: 208px;
+    height: 83px;
+    top: 18px;
+    right: 98px;
+    border-radius: 20px;
+  }
+
+  .vfd_img_area {
+    position: relative;
+    width: 210px;
+  }
+
+  .vfd_img_area .vfd_value {
+    left: 22px;
+    bottom: 12px;
+    font-size: 28px;
+  }
+
+  .network_modal {
+    width: 80px;
+    height: 68px;
+    top: 8px;
+    right: 8px;
+    border-radius: 20px;
+  }
+
+  .chlorine_modal {
+    width: 73px;
+    height: 266px;
+    top: 182px;
+    left: 73px;
+    border-radius: 20px;
+  }
+
+  .water_modal {
+    width: 110px;
+    height: 287px;
+    bottom: 54px;
+    right: 96px;
+    border-radius: 20px;
+  }
+
+  .chlorine_jar i {
+    top: 36px;
+    left: 22px;
+    font-size: 40px;
+  }
+
+  .run-arrow-run {
+    top: 146px;
+    left: 16px;
+  }
+}
+
+.text-blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

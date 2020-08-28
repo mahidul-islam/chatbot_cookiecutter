@@ -1,0 +1,203 @@
+
+.hide {
+  display: none;
+}
+
+/*Settings*/
+.text-blue {
+    color: #007bff;
+}
+
+.text-green {
+    color: green;
+}
+
+a {
+    color: #337ab7;
+}
+
+a:hover {
+    color: #013061;
+    text-decoration: none;
+}
+
+.m8 {
+    margin: 8px;
+}
+
+/*Main page*/
+.main {
+    transition: margin-left .5s;
+    margin-left: 300px;
+}
+
+.main-page {
+    position: relative;
+    top: 80px;
+}
+
+.map {
+    margin-bottom: 15px;
+}
+
+.table.custom-table {
+    margin-bottom: 0;
+}
+
+.table.custom-table th,
+.table.custom-table td {
+    padding: 8px 10px;
+}
+
+.table.custom-table.f13 th,
+.table.custom-table.f13 td {
+    font-size: 13px;
+    padding: 2px 4px;
+}
+
+.custom-cards {
+    margin: 10px;
+    height: calc(100% - 20px);
+}
+
+.custom-cards .card-header {
+    padding: 5px 10px;
+}
+
+.custom-cards .card-body {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.pd0 {
+  padding: 0;
+}
+
+.pd1 {
+  padding: 0.5rem;
+}
+
+.pd2 {
+  padding: 1rem;
+}
+
+.search-bar {
+    padding: 5px;
+}
+
+.search-bar .col-sm-3,
+.search-bar .col-sm-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.location {
+    margin-bottom: 10px;
+}
+
+.custom-nav-tabs {
+    border-bottom: none;
+
+}
+
+.custom-nav-tabs a {
+    font-size: 14px;
+}
+
+.custom-nav-tabs .nav-link.active {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+.custom-tab-content {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+}
+
+.custom-tab-content th {
+    background-color: #f8f9fa;
+    font-weight: 400;
+}
+
+.custom-tab-content .first-border-none tr:first-child th,
+.custom-tab-content .first-border-none tr:first-child td {
+    border-top: none !important;
+}
+
+.pagination-area {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/*All media query*/
+
+@media (max-width: 767.98px) {
+    .main {
+        margin-left: 0;
+    }
+
+    .main-page {
+        top: 20px;
+    }
+
+    .slogun {
+        text-align: center;
+    }
+
+    .top-right-content {
+        padding-right: 10px;
+    }
+
+    .top-bar {
+        height: auto;
+        padding-left: 20px;
+        top: 0;
+        position: relative;
+    }
+
+    .top-bar ul {
+        float: none;
+        text-align: center;
+    }
+
+    .top-bar ul li {
+        margin-left: 5px;
+        margin-bottom: 10px;
+        float: none;
+        display: inline-block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .logo-area-mobile {
+        display: block;
+    }
+
+    .side-bar {
+        margin-left: -310px;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .logo-area-mobile {
+        display: none;
+    }
+
+    .top-bar {
+        height: 70px;
+        padding-left: 310px;
+    }
+}
